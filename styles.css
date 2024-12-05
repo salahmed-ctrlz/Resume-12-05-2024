@@ -1,0 +1,287 @@
+:root {
+    --black-primary: #000000;
+    --black-secondary: #121212;
+    --black-accent: #1E1E1E;
+    --gold-primary: #D4AF37;
+    --gold-secondary: #BF9B30;
+    --text-primary: #F0F0F0;
+    --text-secondary: #CCCCCC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: var(--black-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Image Srtyling */
+
+img {
+    width: 100px;  
+    height: 100px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; 
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4); 
+}
+
+
+
+
+
+
+/* Navgation Styling */
+nav {
+    background-color: var(--black-secondary);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--gold-primary);
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold-primary);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--gold-primary);
+}
+
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Sectionn Styling */
+.section {
+    background-color: var(--black-accent);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid var(--gold-primary);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.section:hover::before {
+    transform: scaleX(1);
+}
+
+.section:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.section-title {
+    color: var(--gold-primary);
+    border-bottom: 2px solid var(--gold-primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: white;
+    font-style: bold;
+    text-decoration:dashed;
+    transition: all 0.4s ease;
+}
+
+.project-link:hover {
+    color: var(--gold-secondary);
+    transform: scale(1.05);
+    text-decoration: underline;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2);
+}
+
+
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--black-secondary);
+    border-top: 2px solid var(--gold-primary);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold-primary);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--gold-primary);
+    transform: scale(1.2);
+}
+
+.social-icons a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Formulaire Styling */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: var(--black-secondary);
+    border: 2px solid var(--gold-primary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-secondary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn {
+    background-color: var(--gold-primary);
+    color: var(--black-primary);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--gold-secondary);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.list-item {
+    background-color: var(--black-secondary);
+    border-left: 4px solid var(--gold-primary);
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+}
+
+.list-item:hover {
+    transform: translateX(15px);
+    background-color: var(--black-accent);
+    border-left-color: var(--gold-secondary);
+}
+.language-skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.language-skill:hover {
+    transform: translateX(10px);
+    filter: brightness(1.2);
+}
+
+.language-name {
+    width: 150px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+}
+
+.language-skill:hover .language-name {
+    color: white;
+}
+
+.language-level {
+    flex-grow: 1;
+    height: 20px;
+    background-color: var(--black-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--gold-primary);
+}
+
+.language-level-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-primary), var(--gold-secondary));
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(253, 210, 66, 0.6), 0 0 20px rgba(105, 87, 26, 0.4);
+    transition: width 0.3s ease, box-shadow 0.5s ease;
+}
+
+.language-skill:hover .language-level-fill {
+    box-shadow: 0 0 15px rgba(90, 74, 23, 0.8), 0 0 30px rgba(212, 175, 55, 0.6);
+}
